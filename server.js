@@ -27,7 +27,10 @@ app.get("/drinks", (req,res) =>{
     res.render("index.ejs", {drinks});
 })
 
-
+app.get("/drinks/:id", (req,res) => {
+    const id = req.params.id
+    res.send(id)
+})
 
 // listener
 app.listen(3000, () => {
