@@ -13,5 +13,10 @@
 </head>
 <body>
     <h1>Welcome to gitPub</h1>
+    <ul>
+        <% for (let i = 0; i < drinks.length; i++){ %>
+            <li class="drink-names"> <%= drinks[i].name %> </li>
+        <% } %>
+    </ul>
 </body>
 </html>
