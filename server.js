@@ -1,12 +1,20 @@
 // import express
 const express = require("express")
+const morgan = require("morgan")
+const methodOverride = require("method-override")
 
 
 // create app to run express
 const app = express();
 const drinks = require("./models/drinks.js")
 
+
+
 // middleware
+app.use(express.urlencoded({extended: true}))
+app.use(morgan("dev"))
+app.use(methodOverride("_method"))
+
 
 
 // routes
@@ -18,6 +26,7 @@ app.get("/drinks", (req,res) =>{
     // res.send(drinks)
     res.render("index.ejs", {drinks});
 })
+
 
 
 // listener

@@ -14,9 +14,18 @@
 <body>
     <h1>Welcome to gitPub</h1>
     <ul>
+
+        <!-- a loop to capitalize first letter of each drink drink
+        a loop to .splice first letter back into the correct spot
+        a loop to create unordered list -->
         <% for (let i = 0; i < drinks.length; i++){ %>
-            <li class="drink-names"> <%= drinks[i].name %> </li>
+            <% drinks[i].name = drinks[i].name.charAt(0).toUpperCase() + drinks[i].name.slice(1) %>
         <% } %>
+        
+        <% for (let x = 0; x < drinks.length; x++){ %>
+            <li class="drink-names"> <%= drinks[x].name %> </li>
+        <% } %>
+
     </ul>
 </body>
 </html>
