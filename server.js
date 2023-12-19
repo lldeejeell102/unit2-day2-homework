@@ -29,8 +29,11 @@ app.get("/drinks", (req,res) =>{
 
 app.get("/drinks/:id", (req,res) => {
     const id = req.params.id
-    res.send(id)
+    const drink = drinks[id]
+    res.render("show.ejs", {drink})
 })
+
+
 
 // listener
 app.listen(3000, () => {
