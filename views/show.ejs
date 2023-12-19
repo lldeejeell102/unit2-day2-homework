@@ -7,12 +7,18 @@
     <style>
         body {
             background-color: brown;
-            color: whitesmoke; 
+            color: whitesmoke;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to gitPub</h1>
-    <h2> <%= drink.name %> </h2>
+    <h1>At foo bar</h1>
+    <br>
+    <br>
+    <img src="<%= drink.image %>.png">
+    <h2> <%= drink.name %></h2>
+    <h3> $<%= drink.price %></h3>
+    <a href="/drinks"> Back to Main Page</a>
 </body>
 </html>
